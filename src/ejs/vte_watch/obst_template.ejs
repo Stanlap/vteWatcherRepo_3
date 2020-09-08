@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+<body>
+    <div id='divObstOrGynProfile' hidden>
+        <p>Профиль пациента в рамках специальности:</p>
+        <label for='rdoObstProfile' class='clsObstRFOrGynProfile'> <input type='radio' name='rdoObstOrGynProfile'
+                id='rdoObstProfile' value='0'> Акушерский <br></label>
+        <label for='rdoGynProfile' class='clsObstRFOrGynProfile'> <input type='radio' name='rdoObstOrGynProfile'
+                id='rdoGynProfile' value='1'> Гинекологический <br></label>
+    </div>
+    <div id='divPregnancyOrChildbirth' hidden>
+        <p>Период наблюдения женщины:</p>
+        <label for='rdoPregnancyPeriod' class='lblPregnancyOrChildbirth'> <input type='radio'
+                name='rdoPregnancyOrChildbirth' id='rdoPregnancyPeriod' value='0'> беременность </label>
+        <input type='number' id='inpWeekOfPregnancy' placeholder='срок в неделях' hidden> <br>
+        <label for='rdoChildbirthPeriod' class='lblPregnancyOrChildbirth'>
+            <input type='radio' name='rdoPregnancyOrChildbirth' id='rdoChildbirthPeriod' value='1'> роды и ранний
+            послеродовый период<br><br></label>
+        <div id='divDateOfChildbirth' hidden>
+            Дата родов:
+            <button id='btnChildbirthYesterday'>Вчера</button>
+            <button id='btnChildbirthToday'>Сегодня</button>
+            <button id='btnChildbirthSomeDate'>Другая дата:</button>
+            <input type='date' id='inpDateOfChildbirth' hidden>
+        </div>
+    </div><br>
+    <label for='chkIsOrNoSurg' class='lblIsOrNoSurg' hidden><input type='checkbox' id='chkIsOrNoSurg'> Оперативное
+        лечение:<br></label>
+    <div id='divChooseKindOfOper' hidden>
+        <p>Выбрать операцию:</p>
+        <button class='btnAccordChooseOper btnObsGynOper' hidden>Акушерство и гинекология</button>
+        <div class='divObsGynOper' hidden>
+            <select size='5' multiple>
+                <option value='0'> аборт</option>
+                <option value='1'> кесарево сечение плановое </option>
+                <option value='1'> кесарево сечение в родах</option>
+                <option value='1'> ампутация матки</option>
+                <option value='1'> экстирпация матки</option>
+            </select>
+        </div>
+    </div><br>
+    </div>
+</body>
+<html>

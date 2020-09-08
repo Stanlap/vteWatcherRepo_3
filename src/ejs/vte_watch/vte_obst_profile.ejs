@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obst profile page</title>
+  </head>
+<body> <%- include('../partials/header_2') %>
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <div class="col bg-secondary">
+      </div>
+      <div class="wCol col-10 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+        <%- include('../partials/header_prog') %>
+        <h5>Причина курации пациентки:</h5>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" id="btnPregnancy">Беременность</button>
+        <input type="number" class="form-control" placeholder="Срок в неделях" id="inpWeekOfPregnancy"max="42">
+        <div id="fg_1"></div>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" id= "btnChildbirth">Роды и ранний
+          послеродовый период</button>
+        <input type="date" class="form-control" id="inpDateOfChildbirth" title="Важно! Укажите дату родов">
+        <button type="button" class="btn btn-secondary btn-lg btn-block" id="btnGynPathol">Гинекологическая патология</button>
+        <div class="custom-control custom-checkbox">
+          <br>
+          <input type="checkbox" class="custom-control-input" id="chkIsOrNoOper">
+          <label class="custom-control-label" for="chkIsOrNoOper" id='lblIsOrNoOper'> Оперативное лечение</label>
+      </div><br>
+        <button class="btn btn-primary" type="button" id="btnOne">Принять</button>  
+      </div>
+      <div class="col bg-secondary">
+      </div>
+    </div>
+  </div>
+  <%- include('../partials/footer') %>
+</body>
+<html>

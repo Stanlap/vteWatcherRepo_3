@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oper profile page</title>
+  </head>
+  <body> <%- include('../partials/header_2') %>
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <div class="col bg-secondary">
+      </div>
+      <div class="wCol col-10 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+        <%- include('../partials/header_prog') %>
+        <div id="divOper">
+          <button type="button" class="btn btn-primary btn-lg btn-block" id="btnChooseOp">Выбрать операцию из
+            списка</button>
+          <div id="accListOp">
+          </div>
+          <button type="button" class="btn btn-secondary btn-lg btn-block" id="btnCreateOwnOpProf">Создать профиль
+            операции самостоятельно</button>
+          <div id='divCreateOwnOpProf'>
+            <label for="taNonTrivialOperTitle"></label><textarea class="form-control" id="taNonTrivialOperTitle"
+              rows="3" placeholder="Название операции"></textarea>
+            <br>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-primary" data-toggle="tooltip"
+                title="Может быть проведена без госпитализации больного. Также термин отражает продолжительность операции (чаще до 60 минут) и тяжесть операционной травмы.">
+                <input type="radio" name="rdoSmallOrLargeOper" id="rdoSmallOper" value="0"> Малая<span
+                  class='preComments'>&hellip;</span><span class='comments'> Может быть проведена без госпитализации
+                  больного. Также термин отражает продолжительность операции (чаще до 60 минут) и тяжесть операционной
+                  травмы.</span>
+              </label>
+              <label class="btn btn-secondary" data-toggle="tooltip"
+                title="Выполняется в стационаре. Опасная, травматичная. Длительность &gt; 60 минут"><input type="radio"
+                  name="rdoSmallOrLargeOper" id="rdoLargeOper" value="1"> Большая<span
+                  class='preComments'>&hellip;</span><span class='comments'> , выполняется в стационаре. Опасная,
+                  травматичная. Длительность &gt; 60 минут</span>
+              </label>
+            </div>
+            <br><br>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="chkTimeOfSurg" value='1000000000000000'>
+              <label class="custom-control-label" id="lblTimeOfSurg" for="chkTimeOfSurg">
+                длительность операции &gt; 60 минут</label>
+            </div>
+          </div><br>
+
+          <h5>Дата операции:</h5>
+          <div class="row">
+            <div class="col-7" id="divForDate_1">
+            </div>
+            <div class="col-5">
+              <button type="button" class="btn btn-secondary" id="btnOperTomorrow">Завтра</button>
+            </div>
+          </div>
+          <br>
+          <h5>Анестезиологическое пособие:</h5>
+          <label for="selKindOfAnesth"></label>
+          <select class="custom-select" id="selKindOfAnesth">
+            <option value='1' selected>Эндотрахеальный наркоз</option>
+            <option value='2'>Внутривенный наркоз</option>
+            <option value='3'>Спинномозговая анестезия</option>
+            <option value='4'>Местная анестезия</option>
+          </select>
+          <br>
+          <div class="col-7" id="divForDate_2">
+          </div><br>
+        </div>
+        <input type="text" class="form-control" placeholder="Инвазивная манипуляция (название)" list="lstInvasions"
+          id="txtInvasions">
+        <datalist id="lstInvasions">
+          <option value="Центральный венозный доступ"></option>
+          <option value="Биопсия паренхиматозного органа"></option>
+          <option value="Артериальный катетер"></option>
+        </datalist>
+        <br>
+        <div id="divForDate_3">
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary" id="btnOne">Принять</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="col bg-secondary">
+      </div>
+    </div>
+  </div>
+  </div>
+  <%- include('../partials/footer') %>
+</body>
+<html>

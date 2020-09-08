@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Profile Page</title>
+  </head>
+<body>
+    <%- include('../partials/header_2') %>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col bg-secondary">
+            </div>
+            <div class="wCol col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6"><%- include('../partials/header_prog') %>
+                <form>
+                    <h4>Антропометрические данные пациента</h4>
+                    
+                    <!-- <div class="alert alert-warning alert-dismissible" id= "warning-alert" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span></button>
+                            Информационное сообщение (alert), которое можно закрыть
+                        </div> -->
+                    <div class="form-group" id="fg_1">
+                        Дата рождения:<input type="date" class="form-control" id="inpDateOfBirth" required>
+                    </div>
+
+                    <div class="form-group" id="fg_2">
+                        <input type="number" class="form-control " id="inpWeight" placeholder="Вес" required>
+                    </div>
+                    <div class="form-group" id="fg_3">
+                        <input type="number" class="form-control " id="inpHeight" placeholder="Рост" required>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="chkMale">
+                        <label class="custom-control-label" for="chkMale">Мужской пол</label>
+                    </div><br>
+                    <!-- <div class="form-group form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class=" form-control form-check-input" value="">Мужской пол
+						</label>
+					</div> -->
+                    <div class="form-group">
+                        <h4>Медицинский профиль пациента</h4>
+                        <select multiple class="form-control " id="slctMedicalProfileOfPatient" size="10" required>
+                            <option value='1'>Терапия</option>
+                            <option value='2'>Фибрилляция предсердий</option>
+                            <option value='3'>Общая хирургия</option>
+                            <option value='4'>Травматология и ортопедия</option>
+                            <option value='5'>Нейрохирургия</option>
+                            <option value='6'>Сердечно-сосудистая хирургия</option>
+                            <option value='7'>Урология</option>
+                            <option value='8'>Комбустиология</option>
+                            <option value='9'>Онкология</option>
+                            <option value='10'>Акушерство и гинекология</option>
+                            <option value='11' hidden>пусто</option>
+                        </select>
+                    </div>
+                    Пациенту планируются:
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="chkInvasions">
+                        <label class="custom-control-label" for="chkInvasions">манипуляции с высоким риском
+                            кровотечения</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="chkIsOrNoSurg">
+                        <label class="custom-control-label" id="lblIsOrNoSurg" for="chkIsOrNoSurg">оперативное
+                            лечение</label>
+                    </div>
+
+                    <br>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="chkCalculateRiskOfBleeding" checked>
+                        <label class="custom-control-label" for="chkCalculateRiskOfBleeding"><strong>Учитывать риск
+                                кровотечения</strong></label>
+                    </div><br>
+
+                    <button type="button" class="btn btn-primary" id="btnOne">
+                        Принять
+                    </button>
+                </form>
+                <br>
+                <br>
+                <br>
+                <br>
+    
+            </div>
+            <div class="col bg-secondary">
+            </div>
+        </div>
+    </div>
+    <%- include('../partials/footer') %>
+</body>
+<html>

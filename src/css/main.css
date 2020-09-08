@@ -1,0 +1,19 @@
+@import "~normalize.css";
+html,
+body {
+    height: 100%;
+background-color:#b0c4de;
+}
+
+.preReference,
+.reference {
+    cursor: help
+}
+@media (min-width: 650px) {
+    .wCol {
+        max-width: 650px;
+    }
+}
+P { 
+    text-indent: 1.5em;
+   }

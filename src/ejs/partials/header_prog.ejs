@@ -1,0 +1,41 @@
+<header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <a href="#" class="navbar-brand" data-toggle="tooltip" title="VTE Watcher">VTE Watcher</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbProg"
+            aria-controls="navbProg" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbProg">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/vte_patient_profile" data-toggle="tooltip" title="К началу программы"><i
+                            class="fas fa-home fa-lg" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="aStepBack" href="#" data-toggle="tooltip" title="Назад на один шаг"><i
+                            class="fas fa-angle-left fa-lg" aria-hidden="true"></i></a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="tooltip" title="Вперед"><i
+                            class="fa fa-angle-right fa-lg" aria-hidden="true"></i></a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/vte_user_profile" data-toggle="tooltip" title="Профиль пользователя"  target="_blank"><i
+                            class="fas fa-user-md fa-lg" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="aReference" href="/vte_reference" data-toggle="tooltip" title="О программе" target="_blank"><i
+                            class="fas fa-question fa-lg" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<script>
+    const doStepBack = (item, title) => {
+    item.pop();
+    localStorage.setItem(title, JSON.stringify(item));
+};
+</script>

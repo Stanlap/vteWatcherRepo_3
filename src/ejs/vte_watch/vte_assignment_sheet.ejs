@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Sheet Page</title>
+  </head>
+<body> 
+    <div class="divNoPrint">
+    <%- include('../partials/header_2') %>
+</div>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col bg-secondary">
+            </div>
+            <div class="wCol col-10 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+                <div class="divNoPrint">
+                <%- include('../partials/header_prog') %>
+            </div>
+                <div id='dialogMain'></div>
+                <button type="button" class="btn btn-primary" id="btnOne">Принять</button>
+                <br><br><br><br><br>
+            </div>
+            <div class="col bg-secondary">
+            </div>
+        </div>
+    </div>
+    <style>
+
+        table {
+            border-collapse: collapse;
+            border: 1px solid grey;
+            width: 700px;
+            table-layout: fixed;
+        }
+
+        th,
+        td {
+            border: 1px solid grey;
+        }
+
+        th {
+            font-size: 10pt;
+            text-align: left;
+        }
+
+        td {
+            font-size: 9pt;
+            text-align: left;
+        }
+
+        tr.trSignature {
+            height: 20px;
+        }
+
+        #tdDocTitle,
+        caption {
+            font-size: 12pt;
+            text-align: center;
+            font-weight: bolder;
+            caption-side: top;
+        }
+
+        #tdSignTitle {
+            font-size: 10pt;
+            text-align: center;
+            font-weight: bolder;
+        }
+    </style>
+    <%- include('../partials/footer') %>
+    <!-- <script src="/scripts/date_manager.js"></script>
+    <script src="/js/vte_watch/vte_assignment_sheet.js" defer></script> -->
+</body>
+<html>

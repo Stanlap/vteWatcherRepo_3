@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=title %></title>
+</head>
+<body>
+    <!-- <a href="/">Главная страница</a><br> -->
+    <a href="/programs">Программы</a><br>
+    <a href="/logout">Logout</a><br>
+    <p><%=message %></p>
+
+    <p id='pTitleOfConclusion' hidden>Комплексная оценка риска ВТЭО:</p>
+    <p id='pTextCollector_1' hidden>Заболевания и риск-факторы:</p>
+    <p id='pTextCollector_2' hidden>Шкалы риска ВТЭО:</p>
+    <p id='pTextCollector_3' hidden>Шкалы риска кровотечения при профилактике ВТЭО:</p>
+
+    <p id='pBestConclusion' hidden>Риск ВТЭО низкий.</p>
+
+    <button id='btnTwo'>OK</button>
+    <button id='btnThree'>OK</button>
+
+
+    <br><br>
+    <footer>&copy;SmartMedInterface</footer>
+    <script src="/scripts/jquery.min.js"></script>
+    <script src="/js/vte_watch/vte_results_rf.js" defer></script>
+</body>
+<html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTE user profile page</title>
+  </head>
+<body>
+    <%- include('../partials/header_2') %>
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col bg-secondary">
+            </div>
+            <div class="wCol col-10 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+                <%- include('../partials/header_prog') %>
+                <form>
+                    <h4>Профиль пользователя</h4>
+                    <div class="form-group">
+                        <label for="name"></label>
+                        <input type="text" class="form-control " id="name" placeholder="Имя"
+                            pattern="^[А-Я][а-яА-Я0-9-_\.]{1,20}$" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patronymic"></label>
+                        <input type="text" class="form-control " id="patronymic" placeholder="Отчество"
+                            pattern="^[А-Я][а-яА-Я0-9-_\.]{1,20}$" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="surname"></label>
+                        <input type="text" class="form-control " id="surname" placeholder="Фамилия"
+                            pattern="^[А-Я][а-яА-Я0-9-_\.]{1,20}$" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="chief"></label>
+                        <input type="text" class="form-control " id="chief" placeholder="Руководитель">
+                    </div>
+                    <div class="form-group">
+                        <label for="org""></label>
+                        <textarea class=" form-control w-100" id="org" rows="3"
+                            placeholder="Название организации"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="depart"></label>
+                        <textarea class="form-control w-100" id="depart" rows="3"
+                            placeholder="Название подразделения"></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-primary" id='btn1' value="Принять"></input>
+                    <!-- <input type="button" class="btn btn-secondary" id='btn2' value="Редактировать"></input> -->
+                    <input type="reset" class="btn btn-secondary" id='btn2' value="Очистить форму"></input>
+                    <input type="button" class="btn btn-secondary" id='btn3' value="Выйти"></input>
+                    <input type="button" class="btn btn-dark" id='btn4' value="Удалить профиль"></input>
+                    <div class="alert alert-success alert-dismissible" style="display:none" id="success-alert"
+                        role="alert">
+                        <strong></strong>
+                    </div>
+
+                </form><br>
+
+            </div>
+            <div class="col bg-secondary">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <%- include('../partials/footer') %>
+</body>
+<html>

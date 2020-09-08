@@ -1,0 +1,32 @@
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <div class="col bg-secondary">
+        </div>
+        <div class="wCol col-10 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+        <form action="/regist" method="post">
+                <div class="form-group">
+                    <label for="inputEmail"></label>
+                    <input type="email" class="form-control" name="email" id="inputEmail" aria-describedby="emailHelp"
+                        placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassw1"></label>
+                    <input type="password" class="form-control" name="password" id="inputPassw1"
+                        placeholder="Введите пароль"
+                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassw2"></label>
+                    <input type="password" class="form-control" name="password" id="inputPassw2"
+                        placeholder="Введите пароль ещё раз"
+                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        <small class="form-text text-muted"><span id="spnPasswHelp"></span></small>
+                </div>
+                <button type="submit" class="btn btn-primary" id="btn1">Регистрация</button>
+                <button type="reset" class="btn btn-secondary">Очистить</button>
+            </form>
+        </div>
+        <div class="col bg-secondary">
+        </div>
+    </div>
+</div>

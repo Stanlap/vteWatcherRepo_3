@@ -1,0 +1,24 @@
+<div class="container-fluid h-100">
+  <div class="row h-100">
+    <div class="col bg-secondary">
+    </div>
+    <div class=" wCol col-10 col-sm-10 col-md-8 col-lg-7 col-xl-6">
+        <form action="/login" method="post">
+          <div class="form-group">
+            <label for="inputEmail"></label>
+            <input type="email" class="form-control" name="email" id="inputEmail" aria-describedby="emailHelp"
+              placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <label for="inputPassw1"></label>
+            <input type="password" class="form-control" name="password" id="inputPassw1" placeholder="Пароль"
+              pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+            <small class="form-text text-muted"><span id="spnPasswHelp"></span></small>
+          </div>
+          <button type="submit" class="btn btn-primary">Войти</button>
+          <button type="button" class="btn btn-secondary" id="btn1">Зарегистироваться</button>
+          <!-- <a href="/registration" class="btn btn-outline-secondary" role="button" id="btn1">Зарегистироваться</a> -->
+        </form>
+      </div>
+			<div class="col bg-secondary">
+      </div>
